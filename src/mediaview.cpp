@@ -442,9 +442,9 @@ void MediaView::activeRowChanged(int row) {
 #ifdef APP_ACTIVATION
     enableDownload = enableDownload || Activation::instance().isLegacy();
 #endif
-#ifdef APP_DOWNLOADS
+//#ifdef APP_DOWNLOADS
     enableDownload = true;
-#endif
+//#endif
     QAction *a = The::globalActions()->value("download");
     a->setEnabled(enableDownload);
     a->setVisible(enableDownload);
