@@ -470,7 +470,7 @@ void MainWindow::createActions() {
     action->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_J));
     action->setCheckable(true);
     action->setIcon(IconUtils::icon("document-save"));
-    action->setVisible(false);
+    action->setVisible(true);
     connect(action, SIGNAL(toggled(bool)), SLOT(toggleDownloads(bool)));
     actions->insert("downloads", action);
 
@@ -478,8 +478,8 @@ void MainWindow::createActions() {
     action->setStatusTip(tr("Download the current video"));
     action->setShortcut(QKeySequence::Save);
     action->setIcon(IconUtils::icon("document-save"));
-    action->setEnabled(false);
-    action->setVisible(false);
+    action->setEnabled(true);
+    action->setVisible(true);
     action->setPriority(QAction::LowPriority);
     connect(action, SIGNAL(triggered()), mediaView, SLOT(downloadVideo()));
     actions->insert("download", action);
